@@ -1,7 +1,13 @@
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Profile = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
+  if(isAuthenticated){
+      getAccessTokenSilently({
+        audience: `https://api.klatching.com`,
+      }).then((accessToken) => console.log(accessToken))
+      .catch((error) => console.log(error));
+  }
 
   if (isLoading) {
     return <div>Loading ...</div>;
