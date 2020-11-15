@@ -4,7 +4,7 @@ const Profile = () => {
   const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
   if(isAuthenticated){
       getAccessTokenSilently({
-        audience: `https://api.klatching.com`,
+        audience: `https://api-dev.klatching.com`,
       }).then((accessToken) => console.log(accessToken))
       .catch((error) => console.log(error));
   }
