@@ -9,7 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
     domain="klatch-dev.us.auth0.com"
-    clientId="G0JNbSRBkDTZ9rsb6A2AUetH6c6pd81g"
+    clientId="5IX7HA4Woyvs1RdLWpwA64JKxpktYWUS"
     redirectUri={window.location.origin}
   >
     <App />
