@@ -5,7 +5,7 @@ const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
   return <button onClick={() => loginWithRedirect({
-      prompt: "email-verfication"
+      //prompt: "email-verfication"
   })}>Log In</button>;
 };
 
